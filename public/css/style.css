@@ -176,7 +176,7 @@ body {
   margin-right: 10px;
 }
 
-.post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong {
+.post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong, .usuario ion-icon, .usuario > img, .conteudo > img {
   cursor: pointer;
 }
 
@@ -240,6 +240,11 @@ body {
 .sidebar > .usuario .texto strong {
   font-weight: 500;
   color: #262626;
+}
+
+.sidebar span {
+  display: flex;
+  margin-top: 5px;
 }
 
 .sidebar .sugestoes .titulo {
@@ -390,4 +395,12 @@ body {
     position: relative;
     top: 4px;
   }
+}
+
+ion-icon {
+  visibility: visible;
+}
+
+.usuario ion-icon {
+  margin-left: 5px;
 }
