@@ -32,7 +32,7 @@ export default function Sugestoes () {
                 <div>Ver tudo</div>
             </div>
 
-			{sugestions.map(sugestion => <LayoutSugestoes image = {sugestion.img} name={sugestion.user} reason={sugestion.reason}/>)}
+			{sugestions.map((sugestion, i) => <LayoutSugestoes image = {sugestion.img} name={sugestion.user} reason={sugestion.reason} key = {i}/>)}
 		</ul>
     )
 }

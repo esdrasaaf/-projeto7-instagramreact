@@ -86,13 +86,14 @@ export default function Posts(){
 
     return (
 		<ul className="posts">
-			{posts.map(post => <LayoutPosts 
+			{posts.map((post, i) => <LayoutPosts 
                 user_img = {post.user_img} 
                 user = {post.user} 
                 content = {post.content} 
                 user_liked = {post.user_liked}
                 user_liked_img = {post.user_liked_img} 
-                likes = {post.likes}/>
+                likes = {post.likes}
+                key = {i}/>
             )}
 		</ul>
     )

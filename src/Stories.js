@@ -27,7 +27,7 @@ export default function Stories () {
     
     return (
         <ul className="stories">
-            {stories.map(storie => <LayoutStorie name = {storie.user} image = {storie.img}/>)}           
+            {stories.map((storie, i) => <LayoutStorie name = {storie.user} image = {storie.img} key = {i}/>)}           
             
             <div className="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
