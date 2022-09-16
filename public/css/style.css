@@ -212,6 +212,18 @@ body {
   margin-bottom: 18px;
 }
 
+.flex {
+display: flex;
+}
+
+.red ion-icon {
+  color: red;
+}
+
+.black ion-icon {
+  color: black;
+}
+
 .sidebar {
   padding-top: 24px;
   position: sticky;

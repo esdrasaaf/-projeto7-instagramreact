@@ -1,3 +1,21 @@
+function LayoutSugestoes (props) {
+    return (
+        <li>
+            <div className="sugestao">
+                <div className="usuario">
+                    <img src = {props.image} alt = "Foto do usuário"/>
+                    <div className="texto">
+                        <div className="nome">{props.name}</div>
+                        <div className="razao">{props.reason}</div>
+                    </div>
+                </div>
+
+                <div className="seguir">Seguir</div>
+            </div>
+        </li>
+    )
+}
+
 export default function Sugestoes () {
     const sugestions = [
         {img: "assets/img/bad.vibes.memes.svg", user: "bad.vibes.memes", reason: "Segue você"},
@@ -14,19 +32,7 @@ export default function Sugestoes () {
                 <div>Ver tudo</div>
             </div>
 
-			{sugestions.map(sugestion => <li>
-                <div className="sugestao">
-                    <div className="usuario">
-                        <img src = {sugestion.img} alt = "Foto do usuário"/>
-                        <div className="texto">
-                            <div className="nome">{sugestion.user}</div>
-                            <div className="razao">{sugestion.reason}</div>
-                        </div>
-                    </div>
-
-                    <div className="seguir">Seguir</div>
-                </div>
-                </li>)}
+			{sugestions.map(sugestion => <LayoutSugestoes image = {sugestion.img} name={sugestion.user} reason={sugestion.reason}/>)}
 		</ul>
     )
 }

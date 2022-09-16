@@ -1,3 +1,18 @@
+function LayoutStorie (props) {
+    return (
+        <li>
+            <div className="story">
+                <div className="imagem">
+                     <img src={props.image} alt = "Foto do usuário"/>
+                </div>
+                <div className="usuario">
+                    {props.name}
+                </div>
+            </div>
+        </li>
+    )
+}
+
 export default function Stories () {
     const stories = [
         {user: "9gag", img: "assets/img/9gag.svg"}, 
@@ -12,16 +27,7 @@ export default function Stories () {
     
     return (
         <ul className="stories">
-            {stories.map(storie => <li>
-                <div className="story">
-                    <div className="imagem">
-                        <img src={storie.img} alt = "Foto do usuário"/>
-                    </div>
-                    <div className="usuario">
-                        {storie.user}
-                    </div>
-                </div>
-            </li>)}           
+            {stories.map(storie => <LayoutStorie name = {storie.user} image = {storie.img}/>)}           
             
             <div className="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
