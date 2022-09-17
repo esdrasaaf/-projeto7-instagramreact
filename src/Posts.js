@@ -68,7 +68,7 @@ function LayoutPosts (props) {
                          <div className="curtidas">
                             <img src={props.user_liked_img} alt="Foto do usuário que curtiu o post"/>
                             <div className="texto">
-                                Curtido por <strong>{props.user_liked}</strong> e <strong>outras {likeNumber} pessoas</strong>
+                                Curtido por <strong>{props.user_liked}</strong> e <strong>outras {likeNumber.toLocaleString('pt-BR').replace(/,/g, '.')} pessoas</strong>
                             </div>
                         </div>
                     </div>
