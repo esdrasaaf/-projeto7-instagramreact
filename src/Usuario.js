@@ -7,11 +7,17 @@ export default function Usuario() {
 
     function newUserName () {
         let newName = prompt("Digite o novo username")
+        while(newName === '') {
+            newName = prompt("Digite um username válido")
+        }
         setUserName(userName = newName)
     }
 
     function newUserImg () {
         let newImg = prompt("Coloque o URL da nova foto de perfil")
+        while(newImg === '') {
+            newImg = prompt("Coloque um URL válido")
+        }
         setUserImg (userImg = newImg)
     }
 
