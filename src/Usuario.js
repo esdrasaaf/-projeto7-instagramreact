@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 
 export default function Usuario() {
 
-    let [userName, setUserName] = useState("Catana")
-    let [userImg, setUserImg] = useState("assets/img/catanacomics.svg")
+    let [userName, setUserName] = useState("Alisson")
+    let [userImg, setUserImg] = useState("assets/img/IMG_20220528_233012_262.jpg")
 
     function newUserName () {
         let newName = prompt("Digite o novo username")
@@ -25,7 +25,7 @@ export default function Usuario() {
         <div className="usuario">
             <img onClick = {newUserImg} src= {userImg} alt="Foto do usuário"/>
             <div className="texto">
-                <strong>catanacomics</strong>
+                <strong>esdras_aaf</strong>
                 <span>
                     <p>{userName}</p>
                     <ion-icon name="pencil" onClick = {newUserName}></ion-icon>
